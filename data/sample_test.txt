@@ -1,0 +1,22 @@
+在	p	ADV	
+变	v	ATT	
+更	v	ATT	
+前	nd	POB	
+供	v	ATT	
+货	v	ATT	
+编	n	ATT	
+号	n	ATT	
+中	nd	POB	
+填	v	HED	
+写	v	HED	
+7	m	VOB	
+5	m	VOB	
+1	m	VOB	
+1	m	VOB	
+1	m	VOB	
+L	m	VOB	
+A	m	VOB	
+2	m	VOB	
+2	m	VOB	
+0	m	VOB	
+
