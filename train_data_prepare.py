@@ -18,17 +18,17 @@ cws_model_path = os.path.join(LTP_DATA_DIR, 'cws.model')  # 分词
 pos_model_path = os.path.join(LTP_DATA_DIR, 'pos.model')  # 词性标注模型路径，模型名称为`pos.model`
 srl_model_path = os.path.join(LTP_DATA_DIR, 'pisrl.model')  # 语义角色标注模型目录路径
 
-segmentor = Segmentor()  # 初始化实例
+segmentor = Segmentor()     # 初始化实例
 segmentor.load(cws_model_path)  # 加载模型
 
 
-postagger = Postagger()  # 初始化实例
+postagger = Postagger()     # 初始化实例
 postagger.load(pos_model_path)  # 加载模型
 
-parser = Parser()  # 初始化实例
+parser = Parser()    # 初始化实例
 parser.load(par_model_path)  # 加载模型
 
-labeller = SementicRoleLabeller() # 初始化实例
+labeller = SementicRoleLabeller()    # 初始化实例
 labeller.load(srl_model_path)  # 加载模型
 
 def cht_to_chs(line):   # 转换繁体到简体
@@ -73,26 +73,41 @@ def load_data():  # 从手动标注集加载数据
                 labD.append(lin)
     return words, labA, labT, labD
 
+# 找HED
+def getHED(words):
+    root = None
+    for word in words:
+        if word['gov'] == -1:
+            root = word['dep']
+    return root
 
-def data_prepare(sentences, labA, labT, labD):   # 获取人工标注
+
+def data_prepare(words, labWs, labCs, labEs): # 获取人工标注
     dataList = []
     labelList = []
     postagList = []
     parserList = []
     srlList = []
 
-    for i in range(len(sentences)):
-        # if i % 100 == 0:
-        #     print(i, end=',')
+    for i in range(len(words)):
+        if i % 100 == 0:
+            print(i, end=',')
 
         word_list = []  # 单句话的 分词 list
         postag_list = []  # 单句话分词后的 词性 list
         parser_list = []  # 单句话分词后的 句法 list
-        srl_list = []
+        srl_list = []   # 单句话分词后的 主谓宾 list
+        arcs_list = []  # 句法三元组
 
+        sequence = list(words[i])  # 单个字
+        sequence_postag = []  # 单个字的词性
+        sequence_parser = []  # 单个字的句法
+        sequence_srl = []   # 单个字的主谓宾
 
-        words = segmentor.segment(sentences[i])  # 分词
-        word_list = list(words)
+        dataList.append(sequence)  # datalist 将每一句话的每一个字作为一个元素加进去
+
+        word = segmentor.segment(words[i])  # 分词
+        word_list = list(word)
         # 分词后处理 添加去掉的空格
         for d in range(len(sequence)):
             if sequence[d] == '\u3000':
@@ -116,9 +131,6 @@ def data_prepare(sentences, labA, labT, labD):   # 获取人工标注
         for arc in arcs:
             parser_list.append(arc.relation)
 
-        roles = labeller.label(words, postag, arcs) # 语义角色标注
-
-
         for s in range(len(postag_list)):  # 词性标注到每个字上
             for t in range(len(word_list[s])):
                 sequence_postag.append(postag_list[s])
@@ -129,12 +141,50 @@ def data_prepare(sentences, labA, labT, labD):   # 获取人工标注
                 sequence_parser.append(parser_list[s])
         parserList.append(sequence_parser)
 
-        # label 标签
-        labWstring = labA[i]
-        labCstring = labT[i]
-        labEstring = labD[i]
+        # LTP 提取主干
+        x = 0
+        for arc in arcs:
+            parser_list.append(arc.relation)
+            dict = {'dep': x, 'gov': arc.head-1, 'pos': arc.relation}
+            arcs_list.append(dict)
+            x = x + 1
 
-        if len(labA[i]) == 0 and len(labT[i]) == 0 and len(labD[i]) == 0:
+        hed = getHED(arcs_list)
+        if hed is not None:
+            predicate_index = hed  # 谓语
+            #print(predicate_index)
+
+        roles = labeller.label(word, postag, arcs)  # 语义角色标注
+        for role in roles:
+            for arg in role.arguments:
+                if (len(arg.name) == 2) and (arg.name[0] == 'A') and (arg.name[1] != '0'):
+                    object_index_start = arg.range.start  # 宾语开始
+                    object_index_end = arg.range.end    # 宾语结束
+                    # 去掉宾语 data 两端引号
+                    if word_list[object_index_start] == "“" and word_list[object_index_end] == "”":
+                        object_index_start = object_index_start + 1
+                        object_index_end = object_index_end - 1
+                    #print(object_index_start, object_index_end)
+
+        for y in range(len(postag_list)):
+            if y == predicate_index:
+                srl_list.append("P")
+            elif y >= object_index_start and y <= object_index_end :
+                srl_list.append("O")
+            else:
+                srl_list.append("X")
+
+        for s in range(len(postag_list)):  # 主谓宾 标注到每个字上
+            for t in range(len(word_list[s])):
+                sequence_srl.append(srl_list[s])
+        srlList.append(sequence_srl)
+
+        # label 标签
+        labWstring = labWs[i]
+        labCstring = labCs[i]
+        labEstring = labEs[i]
+
+        if len(labWs[i]) == 0 and len(labCs[i]) == 0 and len(labEs[i]) == 0:
             label = (len(words[i])) * "O"
         else:
             for j in range(len(labWstring)):
@@ -161,15 +211,18 @@ def data_prepare(sentences, labA, labT, labD):   # 获取人工标注
             label = re.sub(u'[^LXMlmxJQKqIr]', "0", words[i])
         labelList.append(list(label))
 
+    postagger.release()  # 释放模型
+    parser.release()  # 释放模型
+    segmentor.release()  # 释放模型
+    labeller.release()  # 释放模型
+    return dataList, labelList, parserList, postagList, srlList
 
-    return dataList, labelList, parserList, postagList
 
-
-def write(words, lab, parser, postag):
+def write(words, lab, parser, postag, srl):
     fw = codecs.open('data/sample_train.txt', 'w', 'utf-8')
     for i in range(len(words)):
         for j in range(len(words[i])):
-            line = ''.join([words[i][j] + '\t' + postag[i][j] + '\t' + parser[i][j] + '\t' + lab[i][j]]) + '\n'
+            line = ''.join([words[i][j] + '\t' + postag[i][j] + '\t' + parser[i][j] + '\t' + srl[i][j] + '\t' + lab[i][j]]) + '\n'
             fw.writelines(line)
         fw.writelines('\n')
     fw.close()
@@ -188,14 +241,9 @@ def embedding_sentences(sentences):
 
 words, labA, labT, labD = load_data()
 # 得到基于字的词性标注、句法分析、标签
-dataList, labelList, parserList, postagList = data_prepare(words, labA, labT, labD)
-
+dataList, labelList, parserList, postagList, srlList = data_prepare(words, labA, labT, labD)
 # 写入txt
-write(dataList, labelList, parserList, postagList)
+write(dataList, labelList, parserList, postagList, srlList)
 # 构造embedding
 embedding_sentences(words)
 
-postagger.release()  # 释放模型
-parser.release()  # 释放模型
-segmentor.release()  # 释放模型
-labeller.release()  # 释放模型
