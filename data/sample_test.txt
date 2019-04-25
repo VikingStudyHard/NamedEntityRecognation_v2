@@ -1,22 +1,17 @@
-在	p	ADV	
-变	v	ATT	
-更	v	ATT	
-前	nd	POB	
-供	v	ATT	
-货	v	ATT	
-编	n	ATT	
-号	n	ATT	
-中	nd	POB	
-填	v	HED	
-写	v	HED	
-7	m	VOB	
-5	m	VOB	
-1	m	VOB	
-1	m	VOB	
-1	m	VOB	
-L	m	VOB	
-A	m	VOB	
-2	m	VOB	
-2	m	VOB	
-0	m	VOB	
+邮	n	ATT	X
+政	n	ATT	X
+编	n	ATT	X
+码	n	ATT	X
+一	m	ATT	X
+栏	n	SBV	X
+输	v	HED	P
+入	v	HED	P
+“	wp	WP	X
+５	m	VOB	O
+１	m	VOB	O
+０	m	VOB	O
+４	m	VOB	O
+１	m	VOB	O
+０	m	VOB	O
+”	wp	WP	X
 

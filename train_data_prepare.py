@@ -88,6 +88,7 @@ def data_prepare(words, labWs, labCs, labEs): # 获取人工标注
     postagList = []
     parserList = []
     srlList = []
+    words1 = words
 
     for i in range(len(words)):
         if i % 100 == 0:
@@ -149,10 +150,15 @@ def data_prepare(words, labWs, labCs, labEs): # 获取人工标注
             arcs_list.append(dict)
             x = x + 1
 
+        predicate_index = -1
+        object_index_start = len(word_list)+1
+        object_index_end = -1
+
         hed = getHED(arcs_list)
         if hed is not None:
             predicate_index = hed  # 谓语
             #print(predicate_index)
+
 
         roles = labeller.label(word, postag, arcs)  # 语义角色标注
         for role in roles:
@@ -185,30 +191,30 @@ def data_prepare(words, labWs, labCs, labEs): # 获取人工标注
         labEstring = labEs[i]
 
         if len(labWs[i]) == 0 and len(labCs[i]) == 0 and len(labEs[i]) == 0:
-            label = (len(words[i])) * "O"
+            label = (len(words1[i])) * "O"
         else:
             for j in range(len(labWstring)):
                 if len(labWstring[j]) == 1:
                     pattern = "I"
-                    words[i] = re.sub(labWstring[j], pattern, str(words[i]))
+                    words1[i] = re.sub(labWstring[j], pattern, str(words1[i]))
                 if len(labWstring[j]) > 1:
                     pattern = "L" + (len(labWstring[j]) - 2) * "M" + "X"
-                    words[i] = re.sub(labWstring[j], pattern, str(words[i]))
+                    words1[i] = re.sub(labWstring[j], pattern, str(words1[i]))
             for k in range(len(labCstring)):
                 if len(labCstring[k]) == 1:
                     pattern = "r"
-                    words[i] = re.sub(labCstring[k], pattern, str(words[i]))
+                    words1[i] = re.sub(labCstring[k], pattern, str(words1[i]))
                 if len(labCstring[k]) > 1:
                     pattern = "l" + (len(labCstring[k]) - 2) * "m" + "x"
-                    words[i] = re.sub(labCstring[k], pattern, str(words[i]))
+                    words1[i] = re.sub(labCstring[k], pattern, str(words1[i]))
             for p in range(len(labEstring)):
                 if len(labEstring[p]) > 1:
                     pattern = "J" + (len(labEstring[p]) - 2) * "Q" + "K"
-                    words[i] = re.sub(labEstring[p], pattern, str(words[i]))
+                    words1[i] = re.sub(labEstring[p], pattern, str(words1[i]))
                 if len(labEstring[p]) == 1:
                     pattern = "q"
-                    words[i] = re.sub(labEstring[p], pattern, str(words[i]))
-            label = re.sub(u'[^LXMlmxJQKqIr]', "0", words[i])
+                    words1[i] = re.sub(labEstring[p], pattern, str(words1[i]))
+            label = re.sub(u'[^LXMlmxJQKqIr]', "0", words1[i])
         labelList.append(list(label))
 
     postagger.release()  # 释放模型

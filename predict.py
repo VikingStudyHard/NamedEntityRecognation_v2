@@ -117,5 +117,6 @@ def predict(string):
     return finalAction, finalTarget, finalData
 
 
-# resultp, resultt, da = predict('在变更后MDS名称中填写MBRASSY-FRSIDERH')
-# print(resultp, resultt, da)
+
+resultp, resultt, da = predict('邮政编码一栏输入“５１０４１０”')
+print(resultp, resultt, da)

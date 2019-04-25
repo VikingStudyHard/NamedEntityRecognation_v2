@@ -50,7 +50,7 @@ labeller.load(srl_model_path)  # 加载模型
 # recognizer.load(ner_model_path)  # 加载模型
 
 
-sentence = '填写查找参数中的部件号为5.5.1_test'
+sentence = '邮政编码一栏输入“５１０４１０”'
 parser_list=[]
 arcs_list = []
 

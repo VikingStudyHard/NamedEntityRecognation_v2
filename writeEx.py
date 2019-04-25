@@ -3,11 +3,11 @@ import numpy as np
 import pandas as pd
 from predict import predict
 import Levenshtein   # pip install python-Levenshtein
-
+from test_data_prepare import release
 
 def compare():
-    #ExcelFile = pd.read_excel('./RESULT.xlsx', header=None, index=None).fillna(0)
-    ExcelFile = pd.read_excel('./ResultTest.xlsx', header=None, index=None).fillna(0)
+    ExcelFile = pd.read_excel('./RESULT.xlsx', header=None, index=None).fillna(0)
+   #ExcelFile = pd.read_excel('./ResultTest.xlsx', header=None, index=None).fillna(0)
     y = np.array(ExcelFile.values)
     row = y.shape[0]
     num = 0
@@ -52,13 +52,15 @@ def compare():
             sheet.write(j, 3, str(Dratio))
             j += 1
         # else:
-
-    xls.save('testResult.xls')
+    release()
+    xls.save('testResult4.xls')
     result = num / row
     print('result:' + str(result))
 
 
 compare()
+
 # result:0.8936241610738255
 # result:0.8946308724832215
 # result:0.8946308724832215
+# result:0.9060402684563759
