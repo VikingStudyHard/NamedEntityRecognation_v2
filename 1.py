@@ -50,7 +50,7 @@ labeller.load(srl_model_path)  # 加载模型
 # recognizer.load(ner_model_path)  # 加载模型
 
 
-sentence = '邮政编码一栏输入“５１０４１０”'
+sentence = '结束时间为16年04月05日14:49:33'
 parser_list=[]
 arcs_list = []
 
@@ -93,7 +93,7 @@ if hed is not None:
 
 # print("主语：%s" % word_list[zhuWord])
 print("提取主干 谓语：%s" % word_list[weiWord])
-#print("提取主干 宾语：%s" % word_list[binWord])
+print("提取主干 宾语：%s" % word_list[binWord])
 
 roles = labeller.label(word, postags, arcs)  # 语义角色标注
 for role in roles:

@@ -55,7 +55,7 @@ model_params:
       path: null
       path_pre_train: null
       shape:
-      - 4
+      - 10
       - 32
   feature_names:
   - f1

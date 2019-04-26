@@ -143,22 +143,21 @@ def data_prepare(words, labWs, labCs, labEs): # 获取人工标注
         parserList.append(sequence_parser)
 
         # LTP 提取主干
-        x = 0
-        for arc in arcs:
-            parser_list.append(arc.relation)
-            dict = {'dep': x, 'gov': arc.head-1, 'pos': arc.relation}
-            arcs_list.append(dict)
-            x = x + 1
-
-        predicate_index = -1
+        # x = 0
+        # for arc in arcs:
+        #     parser_list.append(arc.relation)
+        #     dict = {'dep': x, 'gov': arc.head-1, 'pos': arc.relation}
+        #     arcs_list.append(dict)
+        #     x = x + 1
+        #
+        # predicate_index = -1
         object_index_start = len(word_list)+1
         object_index_end = -1
 
-        hed = getHED(arcs_list)
-        if hed is not None:
-            predicate_index = hed  # 谓语
-            #print(predicate_index)
-
+        # hed = getHED(arcs_list)
+        # if hed is not None:
+        #     predicate_index = hed  # 谓语
+        #     #print(predicate_index)
 
         roles = labeller.label(word, postag, arcs)  # 语义角色标注
         for role in roles:
@@ -172,17 +171,97 @@ def data_prepare(words, labWs, labCs, labEs): # 获取人工标注
                         object_index_end = object_index_end - 1
                     #print(object_index_start, object_index_end)
 
-        for y in range(len(postag_list)):
-            if y == predicate_index:
-                srl_list.append("P")
-            elif y >= object_index_start and y <= object_index_end :
-                srl_list.append("O")
-            else:
-                srl_list.append("X")
+        # for y in range(len(postag_list)):
+        #     if y == predicate_index:
+        #         srl_list.append("P")
+        #     elif y >= object_index_start and y <= object_index_end :
+        #         srl_list.append("O")
+        #     else:
+        #         srl_list.append("X")
 
-        for s in range(len(postag_list)):  # 主谓宾 标注到每个字上
-            for t in range(len(word_list[s])):
-                sequence_srl.append(srl_list[s])
+        # for s in range(len(postag_list)):  # 主谓宾 标注到每个字上
+        #     for t in range(len(word_list[s])):
+        #         sequence_srl.append(srl_list[s])
+        # srlList.append(sequence_srl)
+
+        # for y in range(len(word_list)):
+        #         z = len(word_list[y])
+        #         if y == predicate_index:
+        #             if z == 1:
+        #                 sequence_srl.append("S_P")
+        #             else:
+        #                 for d in range(0, z):
+        #                     if d == 0:
+        #                         sequence_srl.append("B_P")
+        #                     elif d == z-1:
+        #                         sequence_srl.append("E_P")
+        #                     else:
+        #                         sequence_srl.append("I_P")
+        #         elif y >= object_index_start and y <= object_index_end:
+        #             if object_index_start == object_index_end:
+        #                 if z == 1:
+        #                     sequence_srl.append("S_O")
+        #                 else:
+        #                     for d in range(0, z):
+        #                         if d == 0:
+        #                             sequence_srl.append("B_O")
+        #                         elif d == z-1:
+        #                             sequence_srl.append("E_O")
+        #                         else:
+        #                             sequence_srl.append("I_O")
+        #             else:
+        #                 if y == object_index_start:
+        #                     for d in range(0, z):
+        #                         if d == 0:
+        #                             sequence_srl.append("B_O")
+        #                         else:
+        #                             sequence_srl.append("I_O")
+        #                 elif y == object_index_end:
+        #                     for d in range(0, z):
+        #                         if d == z-1:
+        #                             sequence_srl.append("E_O")
+        #                         else:
+        #                             sequence_srl.append("I_O")
+        #                 else:
+        #                     for d in range(0, z):
+        #                         sequence_srl.append("I_O")
+        #         else:
+        #             for d in range(0, z):
+        #                 sequence_srl.append("O")
+        for y in range(len(word_list)):
+                z = len(word_list[y])
+                if y >= object_index_start and y <= object_index_end:
+                    if object_index_start == object_index_end:
+                        if z == 1:
+                            sequence_srl.append("S_O")
+                        else:
+                            for d in range(0, z):
+                                if d == 0:
+                                    sequence_srl.append("B_O")
+                                elif d == z-1:
+                                    sequence_srl.append("E_O")
+                                else:
+                                    sequence_srl.append("I_O")
+                    else:
+                        if y == object_index_start:
+                            for d in range(0, z):
+                                if d == 0:
+                                    sequence_srl.append("B_O")
+                                else:
+                                    sequence_srl.append("I_O")
+                        elif y == object_index_end:
+                            for d in range(0, z):
+                                if d == z-1:
+                                    sequence_srl.append("E_O")
+                                else:
+                                    sequence_srl.append("I_O")
+                        else:
+                            for d in range(0, z):
+                                sequence_srl.append("I_O")
+                else:
+                    for d in range(0, z):
+                        sequence_srl.append("O")
+
         srlList.append(sequence_srl)
 
         # label 标签

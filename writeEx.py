@@ -53,7 +53,7 @@ def compare():
             j += 1
         # else:
     release()
-    xls.save('testResult4.xls')
+    xls.save('testResult5.xls')
     result = num / row
     print('result:' + str(result))
 
