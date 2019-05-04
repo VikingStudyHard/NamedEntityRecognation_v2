@@ -1,18 +1,7 @@
-再	d	ADV	X
-选	v	HED	P
-择	v	HED	P
-某	r	ATT	X
-一	m	ADV	X
-比	p	ADV	X
-开	v	ATT	X
-始	v	ATT	X
-时	n	POB	X
-间	n	POB	X
-更	d	ADV	X
-早	a	ADV	X
-的	u	RAD	X
-结	v	COO	X
-束	v	COO	X
-时	n	VOB	O
-间	n	VOB	O
+点	v	HED
+击	v	HED
+取	v	COO
+消	v	COO
+按	n	VOB
+钮	n	VOB
 

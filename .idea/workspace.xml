@@ -2,16 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="843c1c58-19a1-4f9c-a4d6-c9377b484479" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/RESULT_old.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/in/Train1500-1502.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/input/Train1500-1502_new.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/sample_train_V1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/train_data_prepare_V2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1.py" beforeDir="false" afterPath="$PROJECT_DIR$/1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/Word2vec_model.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Word2vec_model.pkl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/best_model.data-00000-of-00001" beforeDir="false" afterPath="$PROJECT_DIR$/Model/best_model.data-00000-of-00001" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/best_model.index" beforeDir="false" afterPath="$PROJECT_DIR$/Model/best_model.index" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/best_model.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Model/best_model.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RESULT.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/RESULT.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Res/embed/char_embed.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/Res/embed/char_embed.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Res/voc/f1.voc.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/Res/voc/f1.voc.pkl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Res/voc/f4.voc.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/Res/voc/f4.voc.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Res/voc/label.voc.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/Res/voc/label.voc.pkl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/sample_train.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/sample_train.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/in/re.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/data/i/re.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/input/Train1500-1502.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/input/~$Train1500-1502.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/sample_test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/sample_test.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/sample_train.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/evacuate.py" beforeDir="false" afterPath="$PROJECT_DIR$/evacuate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/predict.py" beforeDir="false" afterPath="$PROJECT_DIR$/predict.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testResult3.xls" beforeDir="false" afterPath="$PROJECT_DIR$/testResult3.xls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_data_prepare.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_data_prepare.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_data_prepare.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_data_prepare_V1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/writeEx.py" beforeDir="false" afterPath="$PROJECT_DIR$/writeEx.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,27 +38,40 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/NamedEntityRecognition_v2$1.coverage" NAME="1 Coverage Results" MODIFIED="1556283180256" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/NamedEntityRecognition_v2$sentence_parser.coverage" NAME="sentence_parser Coverage Results" MODIFIED="1555924335179" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/NamedEntityRecognition_v2$1.coverage" NAME="1 Coverage Results" MODIFIED="1556611169138" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/NamedEntityRecognition_v2$train_data_prepare_old.coverage" NAME="train_data_prepare_old Coverage Results" MODIFIED="1556973335545" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/NamedEntityRecognition_v2$sentence_parser.coverage" NAME="sentence_parser Coverage Results" MODIFIED="1556885151246" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/NamedEntityRecognition_v2$setup.coverage" NAME="setup Coverage Results" MODIFIED="1555650198486" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pyltp-0.2.1" />
     <SUITE FILE_PATH="coverage/NamedEntityRecognition_v2$2.coverage" NAME="2 Coverage Results" MODIFIED="1555836269988" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/NamedEntityRecognition_v2$triple_extraction.coverage" NAME="triple_extraction Coverage Results" MODIFIED="1555924404025" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/NamedEntityRecognition_v2$train.coverage" NAME="train Coverage Results" MODIFIED="1556283542036" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/NamedEntityRecognition_v2$evacuate.coverage" NAME="evacuate Coverage Results" MODIFIED="1556358082777" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/NamedEntityRecognition_v2$preprocessing.coverage" NAME="preprocessing Coverage Results" MODIFIED="1556283534211" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/NamedEntityRecognition_v2$train_data_prepare.coverage" NAME="train_data_prepare Coverage Results" MODIFIED="1556283471704" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/NamedEntityRecognition_v2$writeEx.coverage" NAME="writeEx Coverage Results" MODIFIED="1556286859683" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/NamedEntityRecognition_v2$predict.coverage" NAME="predict Coverage Results" MODIFIED="1556286812231" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/NamedEntityRecognition_v2$evacuate.coverage" NAME="evacuate Coverage Results" MODIFIED="1556938595653" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/NamedEntityRecognition_v2$train.coverage" NAME="train Coverage Results" MODIFIED="1556974495005" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/NamedEntityRecognition_v2$preprocessing.coverage" NAME="preprocessing Coverage Results" MODIFIED="1556973595247" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/NamedEntityRecognition_v2$train_data_prepare.coverage" NAME="train_data_prepare Coverage Results" MODIFIED="1556894213258" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/NamedEntityRecognition_v2$writeEx.coverage" NAME="writeEx Coverage Results" MODIFIED="1556971946595" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/NamedEntityRecognition_v2$predict.coverage" NAME="predict Coverage Results" MODIFIED="1556975646869" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/train_data_prepare.py">
+        <entry file="file://$PROJECT_DIR$/train_data_prepare_V1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="298" column="31" selection-start-line="298" selection-start-column="31" selection-end-line="298" selection-end-column="31" />
+            <state relative-caret-position="6682">
+              <caret line="269" column="23" selection-start-line="269" selection-start-column="23" selection-end-line="269" selection-end-column="23" />
               <folding>
-                <element signature="e#1#49#0" expanded="true" />
+                <element signature="e#0#48#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/train_data_prepare_V2.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3718">
+              <caret line="153" column="56" selection-start-line="153" selection-start-column="56" selection-end-line="153" selection-end-column="56" />
+              <folding>
+                <element signature="e#0#48#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -49,14 +79,9 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/sample_test.txt">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/sample_train.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="6924" column="17" selection-start-line="6924" selection-start-column="17" selection-end-line="6924" selection-end-column="17" />
+            <state relative-caret-position="130">
+              <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -64,8 +89,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="64" column="40" selection-start-line="64" selection-start-column="40" selection-end-line="64" selection-end-column="40" />
+            <state relative-caret-position="339">
+              <caret line="57" column="52" lean-forward="true" selection-start-line="57" selection-start-column="52" selection-end-line="57" selection-end-column="52" />
               <folding>
                 <element signature="e#69#80#0" expanded="true" />
               </folding>
@@ -76,8 +101,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/preprocessing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="113" column="41" selection-start-line="113" selection-start-column="41" selection-end-line="113" selection-end-column="41" />
+            <state relative-caret-position="2704">
+              <caret line="109" column="24" selection-start-line="109" selection-start-column="24" selection-end-line="109" selection-end-column="24" />
               <folding>
                 <element signature="e#102#113#0" expanded="true" />
               </folding>
@@ -85,11 +110,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/predict.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="119" selection-start-line="119" selection-end-line="119" />
+            <state relative-caret-position="364">
+              <caret line="132" column="25" lean-forward="true" selection-start-line="119" selection-end-line="141" selection-end-column="27" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -100,32 +125,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="34" column="6" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/evacuate.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="38" column="31" lean-forward="true" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/1.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="52" column="30" selection-start-line="52" selection-start-column="30" selection-end-line="52" selection-end-column="30" />
-              <folding>
-                <element signature="e#0#27#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="1482">
+              <caret line="57" column="22" selection-start-line="57" selection-start-column="22" selection-end-line="57" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -133,10 +134,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/writeEx.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="844">
-              <caret line="57" column="34" selection-start-line="57" selection-start-column="34" selection-end-line="57" selection-end-column="34" />
+            <state relative-caret-position="1014">
+              <caret line="44" column="18" selection-start-line="44" selection-start-column="18" selection-end-line="44" selection-end-column="18" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/model.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3432">
+              <caret line="138" selection-start-line="138" selection-end-line="138" />
+              <folding>
+                <element signature="e#115#126#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -155,6 +168,12 @@
     <findStrings>
       <find>香</find>
       <find>结</find>
+      <find>整</find>
+      <find>创</find>
+      <find>权</find>
+      <find>LSTMCell</find>
+      <find>labEstring</find>
+      <find>M</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -170,13 +189,15 @@
         <option value="$PROJECT_DIR$/4.py" />
         <option value="$PROJECT_DIR$/sentence_parser.py" />
         <option value="$PROJECT_DIR$/triple_extraction.py" />
-        <option value="$PROJECT_DIR$/config.yml" />
-        <option value="$PROJECT_DIR$/test_data_prepare.py" />
-        <option value="$PROJECT_DIR$/predict.py" />
         <option value="$PROJECT_DIR$/1.py" />
-        <option value="$PROJECT_DIR$/train_data_prepare.py" />
-        <option value="$PROJECT_DIR$/writeEx.py" />
         <option value="$PROJECT_DIR$/evacuate.py" />
+        <option value="$PROJECT_DIR$/test_data_prepare.py" />
+        <option value="$PROJECT_DIR$/train_data_prepare.py" />
+        <option value="$PROJECT_DIR$/train_data_prepare_old.py" />
+        <option value="$PROJECT_DIR$/config.yml" />
+        <option value="$PROJECT_DIR$/writeEx.py" />
+        <option value="$PROJECT_DIR$/train_data_prepare_V2.py" />
+        <option value="$PROJECT_DIR$/predict.py" />
       </list>
     </option>
   </component>
@@ -192,7 +213,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -204,6 +224,12 @@
               <item name="NamedEntityRecognition_v2" type="b2602c69:ProjectViewProjectNode" />
               <item name="NamedEntityRecognition_v2" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NamedEntityRecognition_v2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NamedEntityRecognition_v2" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="i" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="NamedEntityRecognition_v2" type="b2602c69:ProjectViewProjectNode" />
@@ -225,6 +251,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -236,9 +263,14 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/data/i" />
+      <recent name="$PROJECT_DIR$/data/in" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Model" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/data/input" />
+      <recent name="$PROJECT_DIR$/Model" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -253,29 +285,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.evacuate">
-    <configuration name="evacuate" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="NamedEntityRecognition_v2" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/evacuate.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.predict">
     <configuration name="predict" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="NamedEntityRecognition_v2" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -342,6 +352,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="train_data_prepare_old" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="NamedEntityRecognition_v2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/train_data_prepare_V2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="writeEx" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="NamedEntityRecognition_v2" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -366,11 +398,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.evacuate" />
-        <item itemvalue="Python.writeEx" />
         <item itemvalue="Python.predict" />
         <item itemvalue="Python.train" />
         <item itemvalue="Python.preprocessing" />
+        <item itemvalue="Python.train_data_prepare_old" />
+        <item itemvalue="Python.writeEx" />
       </list>
     </recent_temporary>
   </component>
@@ -391,57 +423,68 @@
       <workItem from="1555649904472" duration="1369000" />
       <workItem from="1555651591108" duration="456000" />
       <workItem from="1555652710991" duration="1782000" />
-      <workItem from="1555655705845" duration="63608000" />
+      <workItem from="1555655705845" duration="66241000" />
+      <workItem from="1556863209046" duration="12298000" />
+      <workItem from="1556942212994" duration="15311000" />
+      <workItem from="1556974322376" duration="918000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74891000" />
+    <option name="totallyTimeSpent" value="106051000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="61" y="23" width="1619" height="1027" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17057705" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17628409" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3297062" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49968293" visible="true" weight="0.2546246" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.62241566" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49968293" visible="true" weight="0.37867248" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.2850925" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3297062" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50031704" side_tool="true" weight="0.38628945" />
       <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49968293" weight="0.343852" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.43852013" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.31991294" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info anchor="right" id="Database" order="4" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17438173" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3297062" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49968293" visible="true" weight="0.4265506" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.2850925" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3297062" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50031704" side_tool="true" weight="0.38628945" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49968293" weight="0.343852" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.31991294" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/train_data_prepare.py</url>
-          <line>328</line>
-          <option name="timeStamp" value="28" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/train_data_prepare.py</url>
-          <line>186</line>
-          <option name="timeStamp" value="30" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/ChineseTranslation/zh_wiki.py">
@@ -456,11 +499,7 @@
     <entry file="file://$PROJECT_DIR$/pyltp-0.2.1/setup.cfg" />
     <entry file="file://$PROJECT_DIR$/pyltp-0.2.1/ltp/src/ltp/Ltp.h" />
     <entry file="file://$PROJECT_DIR$/pyltp-0.2.1/setup.py" />
-    <entry file="file://$PROJECT_DIR$/../pyltp-0.2.1/src/pyltp.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-10795" />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../pyltp-0.2.1/src/pyltp.cpp" />
     <entry file="file:///Applications/anaconda3/envs/NER/lib/python3.6/site-packages/gensim/utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
@@ -492,16 +531,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
           <caret line="40" lean-forward="true" selection-end-line="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sentence_parser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="71" column="37" lean-forward="true" selection-start-line="71" selection-start-column="37" selection-end-line="71" selection-end-column="37" />
-          <folding>
-            <element signature="e#146#155#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -559,16 +588,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="479">
-          <caret line="317" column="8" selection-start-line="317" selection-start-column="8" selection-end-line="317" selection-end-column="8" />
-          <folding>
-            <element signature="e#115#126#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/load_data.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1727">
@@ -579,67 +598,156 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_data_prepare.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="172" column="36" selection-start-line="172" selection-start-column="36" selection-end-line="172" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="34" column="6" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/sample_test.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="52" column="30" selection-start-line="52" selection-start-column="30" selection-end-line="52" selection-end-column="30" />
+        <state relative-caret-position="1846">
+          <caret line="77" column="26" selection-start-line="77" selection-start-column="26" selection-end-line="77" selection-end-column="26" />
           <folding>
             <element signature="e#0#27#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/sample_train.txt">
+    <entry file="file://$PROJECT_DIR$/sentence_parser.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="6924" column="17" selection-start-line="6924" selection-start-column="17" selection-end-line="6924" selection-end-column="17" />
+        <state relative-caret-position="1422">
+          <caret line="76" column="21" lean-forward="true" selection-start-line="76" selection-start-column="21" selection-end-line="76" selection-end-column="21" />
+          <folding>
+            <element signature="e#146#155#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/train_data_prepare.py">
+    <entry file="file://$PROJECT_DIR$/data/auto_ELV_Test_Cases.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="298" column="31" selection-start-line="298" selection-start-column="31" selection-end-line="298" selection-end-column="31" />
+        <state relative-caret-position="-6504" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_data_prepare.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4680">
+          <caret line="186" column="32" selection-start-line="186" selection-start-column="32" selection-end-line="186" selection-end-column="32" />
           <folding>
-            <element signature="e#1#49#0" expanded="true" />
+            <element signature="e#0#13#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/evacuate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/sample_train_new.txt" />
+    <entry file="file://$PROJECT_DIR$/data/sample_train_V2.txt" />
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3/collections/__init__.pyi">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="685">
+          <caret line="306" column="8" selection-start-line="306" selection-start-column="8" selection-end-line="306" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Applications/anaconda3/envs/NER/lib/python3.6/site-packages/tensorflow/python/client/session.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-310">
+          <caret line="818" column="6" selection-start-line="818" selection-start-column="6" selection-end-line="818" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2018.3/python_stubs/-1471767138/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1109">
+          <caret line="5723" column="6" selection-start-line="5723" selection-start-column="6" selection-end-line="5723" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/sample_train_V1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6375">
+          <caret line="25951" column="13" selection-start-line="25951" selection-start-column="13" selection-end-line="25951" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/sample_train.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="115" lean-forward="true" selection-start-line="115" selection-end-line="115" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/train_data_prepare_V1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6682">
+          <caret line="269" column="23" selection-start-line="269" selection-start-column="23" selection-end-line="269" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/train_data_prepare_V2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3718">
+          <caret line="153" column="56" selection-start-line="153" selection-start-column="56" selection-end-line="153" selection-end-column="56" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/sample_test.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/preprocessing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="113" column="41" selection-start-line="113" selection-start-column="41" selection-end-line="113" selection-end-column="41" />
+        <state relative-caret-position="2704">
+          <caret line="109" column="24" selection-start-line="109" selection-start-column="24" selection-end-line="109" selection-end-column="24" />
           <folding>
             <element signature="e#102#113#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1482">
+          <caret line="57" column="22" selection-start-line="57" selection-start-column="22" selection-end-line="57" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/writeEx.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1014">
+          <caret line="44" column="18" selection-start-line="44" selection-start-column="18" selection-end-line="44" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3432">
+          <caret line="138" selection-start-line="138" selection-end-line="138" />
+          <folding>
+            <element signature="e#115#126#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="64" column="40" selection-start-line="64" selection-start-column="40" selection-end-line="64" selection-end-column="40" />
+        <state relative-caret-position="339">
+          <caret line="57" column="52" lean-forward="true" selection-start-line="57" selection-start-column="52" selection-end-line="57" selection-end-column="52" />
           <folding>
             <element signature="e#69#80#0" expanded="true" />
           </folding>
@@ -648,30 +756,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/predict.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="119" selection-start-line="119" selection-end-line="119" />
+        <state relative-caret-position="364">
+          <caret line="132" column="25" lean-forward="true" selection-start-line="119" selection-end-line="141" selection-end-column="27" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/writeEx.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="844">
-          <caret line="57" column="34" selection-start-line="57" selection-start-column="34" selection-end-line="57" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/evacuate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="38" column="31" lean-forward="true" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>

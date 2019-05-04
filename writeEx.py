@@ -6,8 +6,8 @@ import Levenshtein   # pip install python-Levenshtein
 from test_data_prepare import release
 
 def compare():
-    ExcelFile = pd.read_excel('./RESULT.xlsx', header=None, index=None).fillna(0)
-   #ExcelFile = pd.read_excel('./ResultTest.xlsx', header=None, index=None).fillna(0)
+    ExcelFile = pd.read_excel('./RESULT_V2.xlsx', header=None, index=None).fillna(0)
+    #ExcelFile = pd.read_excel('./ResultTest.xlsx', header=None, index=None).fillna(0)
     y = np.array(ExcelFile.values)
     row = y.shape[0]
     num = 0
@@ -53,7 +53,7 @@ def compare():
             j += 1
         # else:
     release()
-    xls.save('testResult6.xls')
+    xls.save('testResult_v2.xls')
     result = num / row
     print('result:' + str(result))
 

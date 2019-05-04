@@ -72,13 +72,12 @@ def predict(string):
     seq = model.predict(data_dict)
     print(seq)
     for i in range(len(seq)):
-        delOne = ''
-        if (6 in seq[i] or 11 in seq[i] or 7 in seq[i] or 10 in seq[i]):
+        if (6 in seq[i]  or 7 in seq[i] or 13 in seq[i]):
             tem = ""
             for j in range(len(seq[i])):
                 if seq[i][j] == 6 or seq[i][j] == 7:
                     tem += lab[i][j]
-                if seq[i][j] == 10:
+                if seq[i][j] == 13:
                     choiceAction.append(lab[i][j])
             if len(tem) > 0:
                 choiceAction.append(tem)
@@ -87,12 +86,12 @@ def predict(string):
     if finalAction == '':
         finalAction = '0'
     for i in range(len(seq)):
-        if (4 in seq[i] or 3 in seq[i] or 5 in seq[i] or 13 in seq[i]):
+        if (5 in seq[i] or 11 in seq[i]  or 3 in seq[i] or 4 in seq[i]):
             tem = ""
             for j in range(len(seq[i])):
-                if seq[i][j] == 4 or seq[i][j] == 3 or seq[i][j] == 5:
+                if seq[i][j] == 5 or seq[i][j] == 3 or seq[i][j] == 4:
                     tem += lab[i][j]
-                if seq[i][j] == 13:
+                if seq[i][j] == 11:
                     choiceTarget.append(lab[i][j])
             if len(tem) > 0:
                 choiceTarget.append(tem)
@@ -101,12 +100,12 @@ def predict(string):
     if finalTarget == '':
         finalTarget = '0'
     for i in range(len(seq)):
-        if (8 in seq[i] or 2 in seq[i] or 9 in seq[i] or 12 in seq[i]):
+        if (8 in seq[i] or 2 in seq[i] or 9 in seq[i] or 10 in seq[i]):
             tem = ""
             for j in range(len(seq[i])):
                 if seq[i][j] == 8 or seq[i][j] == 2 or seq[i][j] == 9:
                     tem += lab[i][j]
-                if seq[i][j] == 12:
+                if seq[i][j] == 10:
                     choiceData.append(lab[i][j])
             if len(tem) > 0:
                 choiceData.append(tem)
@@ -118,5 +117,30 @@ def predict(string):
 
 
 
-resultp, resultt, da = predict('邮政编码一栏输入“５１０４１０”')
+resultp, resultt, da = predict('在变更后MDS名称中填写MBRASSY-FRSIDERH')
 print(resultp, resultt, da)
+resultp, resultt, da = predict('企业/部门-ID中搜索“&lt;script&gt;alert("test");&lt;/script&gt;”')
+print(resultp, resultt, da)
+resultp, resultt, da = predict('点击查询按钮')
+print(resultp, resultt, da)
+resultp, resultt, da = predict('将标识的必要两项姓名和登录名填写项目分别填写test和123')
+print(resultp, resultt, da)
+
+resultp, resultt, da = predict('填写权限中文名称为1')
+print(resultp, resultt, da)
+resultp, resultt, da = predict('在进展报表统计的查询条件创建时间填写从2016-03-08开始')
+print(resultp, resultt, da)
+resultp, resultt, da = predict('输入DUNS编码为99-999-9999')
+print(resultp, resultt, da)
+resultp, resultt, da = predict('供货编号填为11')
+print(resultp, resultt, da)
+resultp, resultt, da = predict('在变更后LDS名称中填写M')
+print(resultp, resultt, da)
+resultp, resultt, da = predict('在树操作界面中的ID填成CA_8_6820622')
+print(resultp, resultt, da)
+resultp, resultt, da = predict('S中搜索asas')
+print(resultp, resultt, da)
+
+
+# resultp, resultt, da = predict('在变更后MDS名称中填写M')
+# print(resultp, resultt, da)

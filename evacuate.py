@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 
 
-ExcelFile = pd.read_excel('./testResult6.xls', header=None, index=None).fillna(0)
+ExcelFile = pd.read_excel('./testResult7.xls', header=None, index=None).fillna(0)
 y = np.array(ExcelFile.values)
 row = y.shape[0]
 A_avg_ratio = 0

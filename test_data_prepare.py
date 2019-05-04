@@ -18,8 +18,8 @@ postagger = Postagger()  # 初始化实例
 postagger.load(pos_model_path)  # 加载模型
 parser = Parser()  # 初始化实例
 parser.load(par_model_path)  # 加载模型
-labeller = SementicRoleLabeller()  # 初始化实例
-labeller.load(srl_model_path)  # 加载模型
+# labeller = SementicRoleLabeller()  # 初始化实例
+# labeller.load(srl_model_path)  # 加载模型
 
 
 
@@ -104,57 +104,91 @@ def data_prepare(words):
             for t in range(len(word_list[s])):
                 sequence_parser.append(parser_list[s])
         parserList.append(sequence_parser)
+        #
+        # # LTP 提取主干
+        # x = 0
+        # for arc in arcs:
+        #     parser_list.append(arc.relation)
+        #     dict = {'dep': x, 'gov': arc.head-1, 'pos': arc.relation}
+        #     arcs_list.append(dict)
+        #     x = x + 1
+        #
+        # # predicate_index = -1
+        # object_index_start = len(word_list)+1
+        # object_index_end = -1
+        #
+        # # hed = getHED(arcs_list)
+        # # if hed is not None:
+        # #     predicate_index = hed  # 谓语
+        # #     #print(predicate_index)
+        #
+        # roles = labeller.label(word, postag, arcs)  # 语义角色标注
+        # for role in roles:
+        #     for arg in role.arguments:
+        #         if (len(arg.name) == 2) and (arg.name[0] == 'A') and (arg.name[1] != '0'):
+        #             object_index_start = arg.range.start  # 宾语开始
+        #             object_index_end = arg.range.end    # 宾语结束
+        #             # 去掉宾语 data 两端引号
+        #             if word_list[object_index_start] == "“" and word_list[object_index_end] == "”":
+        #                 object_index_start = object_index_start + 1
+        #                 object_index_end = object_index_end - 1
+        #             #print(object_index_start, object_index_end)
 
-        # LTP 提取主干
-        x = 0
-        for arc in arcs:
-            parser_list.append(arc.relation)
-            dict = {'dep': x, 'gov': arc.head-1, 'pos': arc.relation}
-            arcs_list.append(dict)
-            x = x + 1
+        # for y in range(len(postag_list)):
+        #     if y == predicate_index:
+        #         srl_list.append("P")
+        #     elif y >= object_index_start and y <= object_index_end :
+        #         srl_list.append("O")
+        #     else:
+        #         srl_list.append("X")
+        #
+        # for s in range(len(postag_list)):  # 主谓宾 标注到每个字上
+        #     for t in range(len(word_list[s])):
+        #         sequence_srl.append(srl_list[s])
+        # srlList.append(sequence_srl)
+        # for y in range(len(word_list)):
+        #         z = len(word_list[y])
+        #         if y >= object_index_start and y <= object_index_end:
+        #             if object_index_start == object_index_end:
+        #                 if z == 1:
+        #                     sequence_srl.append("S_O")
+        #                 else:
+        #                     for d in range(0, z):
+        #                         if d == 0:
+        #                             sequence_srl.append("B_O")
+        #                         elif d == z-1:
+        #                             sequence_srl.append("E_O")
+        #                         else:
+        #                             sequence_srl.append("I_O")
+        #             else:
+        #                 if y == object_index_start:
+        #                     for d in range(0, z):
+        #                         if d == 0:
+        #                             sequence_srl.append("B_O")
+        #                         else:
+        #                             sequence_srl.append("I_O")
+        #                 elif y == object_index_end:
+        #                     for d in range(0, z):
+        #                         if d == z-1:
+        #                             sequence_srl.append("E_O")
+        #                         else:
+        #                             sequence_srl.append("I_O")
+        #                 else:
+        #                     for d in range(0, z):
+        #                         sequence_srl.append("I_O")
+        #         else:
+        #             for d in range(0, z):
+        #                 sequence_srl.append("O")
+        #
+        # srlList.append(sequence_srl)
+    return dataList, postagList, parserList
 
-        predicate_index = -1
-        object_index_start = len(word_list)+1
-        object_index_end = -1
 
-        hed = getHED(arcs_list)
-        if hed is not None:
-            predicate_index = hed  # 谓语
-            #print(predicate_index)
-
-        roles = labeller.label(word, postag, arcs)  # 语义角色标注
-        for role in roles:
-            for arg in role.arguments:
-                if (len(arg.name) == 2) and (arg.name[0] == 'A') and (arg.name[1] != '0'):
-                    object_index_start = arg.range.start  # 宾语开始
-                    object_index_end = arg.range.end    # 宾语结束
-                    # 去掉宾语 data 两端引号
-                    if word_list[object_index_start] == "“" and word_list[object_index_end] == "”":
-                        object_index_start = object_index_start + 1
-                        object_index_end = object_index_end - 1
-                    #print(object_index_start, object_index_end)
-
-        for y in range(len(postag_list)):
-            if y == predicate_index:
-                srl_list.append("P")
-            elif y >= object_index_start and y <= object_index_end :
-                srl_list.append("O")
-            else:
-                srl_list.append("X")
-
-        for s in range(len(postag_list)):  # 主谓宾 标注到每个字上
-            for t in range(len(word_list[s])):
-                sequence_srl.append(srl_list[s])
-        srlList.append(sequence_srl)
-
-    return dataList, postagList, parserList, srlList
-
-
-def write(word, postag, parser, srl):
+def write(word, postag, parser):
     fw = codecs.open('./data/sample_test.txt', 'w', 'utf-8')
     for i in range(len(word)):
         for j in range(len(word[i])):
-            line = ''.join([word[i][j] + '\t' + postag[i][j] + '\t'+parser[i][j] + '\t' + srl[i][j]]) + '\n'
+            line = ''.join([word[i][j] + '\t' + postag[i][j] + '\t' + parser[i][j]]) + '\n'
             fw.writelines(line)
         fw.writelines('\n')
     fw.close()
@@ -164,13 +198,13 @@ def release():
     postagger.release()  # 释放模型
     parser.release()  # 释放模型
     segmentor.release()  # 释放模型
-    labeller.release()  # 释放模型
+    # labeller.release()  # 释放模型
 
 
 def writetxt(string):
     lab = load_data(string)
-    word, postag, parser, srl = data_prepare(lab)
-    write(word, postag, parser, srl)
+    word, postag, parser = data_prepare(lab)
+    write(word, postag, parser)
     return lab
 
 
