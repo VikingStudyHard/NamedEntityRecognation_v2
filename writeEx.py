@@ -6,7 +6,7 @@ import Levenshtein   # pip install python-Levenshtein
 from test_data_prepare import release
 
 def compare():
-    ExcelFile = pd.read_excel('./RESULT_V2.xlsx', header=None, index=None).fillna(0)
+    ExcelFile = pd.read_excel('./RESULT_V4.xls', header=None, index=None).fillna(0)
     #ExcelFile = pd.read_excel('./ResultTest.xlsx', header=None, index=None).fillna(0)
     y = np.array(ExcelFile.values)
     row = y.shape[0]
@@ -16,7 +16,8 @@ def compare():
     j = 0
     for i in range(0, row):
         print("row:"+str(i))
-        resultAction, resultTarget, resultData = predict(str(y[i, 0]).replace('\t', ''))
+        print(str(y[i, 0]))
+        resultAction, resultTarget, resultData = predict(str(y[i, 0]).replace('\t', '').replace('\n', '').replace('\r', ''))
         initAction = str(y[i, 1]).replace("，", "").replace(",","").replace('\t', '').strip()
         initTarget = str(y[i, 2]).replace("，", "").replace(",","").replace('\t', '').strip()
         if len(str(y[i, 3])) > 0:
@@ -53,7 +54,7 @@ def compare():
             j += 1
         # else:
     release()
-    xls.save('testResult_v2.xls')
+    xls.save('testResult_v4.xls')
     result = num / row
     print('result:' + str(result))
 

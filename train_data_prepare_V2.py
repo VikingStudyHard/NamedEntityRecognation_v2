@@ -44,7 +44,7 @@ def load_data():  # 从手动标注集加载数据
             child = os.path.join(path, str(filename))
             lib = pd.read_excel(child, header=None, index=None).fillna(0)
             for word in lib[0]:
-                word = str(word).replace('\t', '')
+                word = str(word).replace('\t', '').replace('\n', '').replace('\r', '')
                 word = cht_to_chs(word)
                 word = word.replace(' ', '')
                 words.append(word)

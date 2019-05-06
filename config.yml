@@ -34,7 +34,7 @@ model_params:
       path: ./Res/embed/char_embed.pkl
       path_pre_train: ./data/embedding.txt
       shape:
-      - 512
+      - 568
       - 64
     f2:
       dropout_rate: 0.5
@@ -61,5 +61,5 @@ model_params:
   nb_epoch: 100
   path_model: ./Model/best_model
   rnn_unit: lstm
-  sequence_length: 50
+  sequence_length: 60
   use_crf: true

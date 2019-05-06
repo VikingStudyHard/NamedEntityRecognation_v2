@@ -72,10 +72,10 @@ def predict(string):
     seq = model.predict(data_dict)
     print(seq)
     for i in range(len(seq)):
-        if (6 in seq[i]  or 7 in seq[i] or 13 in seq[i]):
+        if (4 in seq[i]  or 5 in seq[i] or 11 in seq[i] or 13 in seq[i]):
             tem = ""
             for j in range(len(seq[i])):
-                if seq[i][j] == 6 or seq[i][j] == 7:
+                if seq[i][j] == 4 or seq[i][j] == 11 or seq[i][j] == 5:
                     tem += lab[i][j]
                 if seq[i][j] == 13:
                     choiceAction.append(lab[i][j])
@@ -86,13 +86,13 @@ def predict(string):
     if finalAction == '':
         finalAction = '0'
     for i in range(len(seq)):
-        if (5 in seq[i] or 11 in seq[i]  or 3 in seq[i] or 4 in seq[i]):
+        if (6 in seq[i]  or 3 in seq[i] or 7 in seq[i]):
             tem = ""
             for j in range(len(seq[i])):
-                if seq[i][j] == 5 or seq[i][j] == 3 or seq[i][j] == 4:
+                if seq[i][j] == 6 or seq[i][j] == 3 or seq[i][j] == 7:
                     tem += lab[i][j]
-                if seq[i][j] == 11:
-                    choiceTarget.append(lab[i][j])
+                # if seq[i][j] == 11:
+                #     choiceTarget.append(lab[i][j])
             if len(tem) > 0:
                 choiceTarget.append(tem)
     ch = '***'.join(choiceTarget)
@@ -116,17 +116,21 @@ def predict(string):
     return finalAction, finalTarget, finalData
 
 
+resultp, resultt, da = predict('在“区域”中选择广西')
+print(resultp, resultt, da)
+resultp, resultt, da = predict('”任务状态“选择：已下达')
+print(resultp, resultt, da)
 
-resultp, resultt, da = predict('在变更后MDS名称中填写MBRASSY-FRSIDERH')
+#
+resultp, resultt, da = predict('产品类别下拉框选择“gzc”')
 print(resultp, resultt, da)
 resultp, resultt, da = predict('企业/部门-ID中搜索“&lt;script&gt;alert("test");&lt;/script&gt;”')
 print(resultp, resultt, da)
 resultp, resultt, da = predict('点击查询按钮')
 print(resultp, resultt, da)
-resultp, resultt, da = predict('将标识的必要两项姓名和登录名填写项目分别填写test和123')
+resultp, resultt, da = predict('在“任务号”文本框中填写一个列表中存在的任务号AT151940')
 print(resultp, resultt, da)
-
-resultp, resultt, da = predict('填写权限中文名称为1')
+resultp, resultt, da = predict('不勾选样品来源')
 print(resultp, resultt, da)
 resultp, resultt, da = predict('在进展报表统计的查询条件创建时间填写从2016-03-08开始')
 print(resultp, resultt, da)
@@ -140,7 +144,10 @@ resultp, resultt, da = predict('在树操作界面中的ID填成CA_8_6820622')
 print(resultp, resultt, da)
 resultp, resultt, da = predict('S中搜索asas')
 print(resultp, resultt, da)
+resultp, resultt, da = predict('在“接受日期<=”的输入框填写：0602')
+print(resultp, resultt, da)
+resultp, resultt, da = predict('在零部件RRR计算的查询条件名称中填写1')
+print(resultp, resultt, da)
+resultp, resultt, da = predict('“辅助费用名称”填写“耐久性试验项目清单(道路试验)”')
+print(resultp, resultt, da)
 
-
-# resultp, resultt, da = predict('在变更后MDS名称中填写M')
-# print(resultp, resultt, da)
