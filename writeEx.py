@@ -2,12 +2,13 @@ import xlwt
 import numpy as np
 import pandas as pd
 from predict import predict
-import Levenshtein   # pip install python-Levenshtein
+import Levenshtein  # pip install python-Levenshtein
 from test_data_prepare import release
+
 
 def compare():
     ExcelFile = pd.read_excel('./RESULT_V4.xls', header=None, index=None).fillna(0)
-    #ExcelFile = pd.read_excel('./ResultTest.xlsx', header=None, index=None).fillna(0)
+    # ExcelFile = pd.read_excel('./ResultTest.xlsx', header=None, index=None).fillna(0)
     y = np.array(ExcelFile.values)
     row = y.shape[0]
     num = 0
@@ -15,17 +16,18 @@ def compare():
     sheet = xls.add_sheet('sheet1', cell_overwrite_ok=True)
     j = 0
     for i in range(0, row):
-        print("row:"+str(i))
+        print("row:" + str(i))
         print(str(y[i, 0]))
-        resultAction, resultTarget, resultData = predict(str(y[i, 0]).replace('\t', '').replace('\n', '').replace('\r', ''))
-        initAction = str(y[i, 1]).replace("，", "").replace(",","").replace('\t', '').strip()
-        initTarget = str(y[i, 2]).replace("，", "").replace(",","").replace('\t', '').strip()
+        resultAction, resultTarget, resultData = predict(
+            str(y[i, 0]).replace('\t', '').replace('\n', '').replace('\r', ''))
+        initAction = str(y[i, 1]).replace("，", "").replace(",", "").replace('\t', '').strip()
+        initTarget = str(y[i, 2]).replace("，", "").replace(",", "").replace('\t', '').strip()
         if len(str(y[i, 3])) > 0:
             initData = str(y[i, 3]).replace("，", "").replace('\t', '').strip()
         else:
             initData = str(y[i, 3])
         resultAction = str(resultAction).split('***')[0]
-        resultTarget = str(resultTarget).replace('***', '').replace("和","").replace("、","")
+        resultTarget = str(resultTarget).replace('***', '').replace("和", "").replace("、", "")
         resultData = "".join(resultData).replace('***', '')
 
         Aratio = Levenshtein.ratio(initAction, str(resultAction))
@@ -52,12 +54,12 @@ def compare():
             sheet.write(j, 2, str(resultData))
             sheet.write(j, 3, str(Dratio))
             j += 1
-        # else:
+        else:
+            print("-----------")
     release()
-    xls.save('testResult_v4.xls')
+    xls.save('testResult_v5.xls')
     result = num / row
     print('result:' + str(result))
-
 
 compare()
 

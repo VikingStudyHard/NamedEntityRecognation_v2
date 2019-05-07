@@ -72,43 +72,60 @@ def predict(string):
     seq = model.predict(data_dict)
     print(seq)
     for i in range(len(seq)):
-        if (4 in seq[i]  or 5 in seq[i] or 11 in seq[i] or 13 in seq[i]):
+        if (vocs[-1]['B_ACT'] in seq[i] or vocs[-1]['I_ACT'] in seq[i] or vocs[-1]['E_ACT'] in seq[i] or vocs[-1]['S_ACT'] in seq[i]):
             tem = ""
             for j in range(len(seq[i])):
-                if seq[i][j] == 4 or seq[i][j] == 11 or seq[i][j] == 5:
+                if seq[i][j] == vocs[-1]['B_ACT']:
+                    tem = lab[i][j]
+                elif seq[i][j] == vocs[-1]['I_ACT']:
                     tem += lab[i][j]
-                if seq[i][j] == 13:
+                elif seq[i][j] == vocs[-1]['E_ACT']:
+                    tem += lab[i][j]
+                    choiceAction.append(tem)
+                elif seq[i][j] == vocs[-1]['S_ACT']:
                     choiceAction.append(lab[i][j])
-            if len(tem) > 0:
-                choiceAction.append(tem)
+            # if len(tem) > 0:
+            #     choiceAction.append(tem)
     ch = '***'.join(choiceAction)
     finalAction = '' + ch
     if finalAction == '':
         finalAction = '0'
     for i in range(len(seq)):
-        if (6 in seq[i]  or 3 in seq[i] or 7 in seq[i]):
+        if (vocs[-1]['B_TAR'] in seq[i]  or vocs[-1]['I_TAR'] in seq[i] or vocs[-1]['E_TAR'] in seq[i] or vocs[-1]['S_TAR'] in seq[i]):
             tem = ""
             for j in range(len(seq[i])):
-                if seq[i][j] == 6 or seq[i][j] == 3 or seq[i][j] == 7:
+                if seq[i][j] == vocs[-1]['B_TAR']:
+                    tem = lab[i][j]
+                elif seq[i][j] == vocs[-1]['I_TAR']:
                     tem += lab[i][j]
+                elif seq[i][j] == vocs[-1]['E_TAR']:
+                    tem += lab[i][j]
+                    choiceTarget.append(tem)
+                elif seq[i][j] == vocs[-1]['S_TAR']:
+                    choiceTarget.append(lab[i][j])
                 # if seq[i][j] == 11:
                 #     choiceTarget.append(lab[i][j])
-            if len(tem) > 0:
-                choiceTarget.append(tem)
+            # if len(tem) > 0:
+            #     choiceTarget.append(tem)
     ch = '***'.join(choiceTarget)
     finalTarget = '' + ch
     if finalTarget == '':
         finalTarget = '0'
     for i in range(len(seq)):
-        if (8 in seq[i] or 2 in seq[i] or 9 in seq[i] or 10 in seq[i]):
+        if (vocs[-1]['B_DAT'] in seq[i] or vocs[-1]['I_DAT'] in seq[i] or  vocs[-1]['E_DAT'] in seq[i] or vocs[-1]['S_DAT']in seq[i]):
             tem = ""
             for j in range(len(seq[i])):
-                if seq[i][j] == 8 or seq[i][j] == 2 or seq[i][j] == 9:
+                if seq[i][j] == vocs[-1]['B_DAT']:
+                    tem = lab[i][j]
+                elif seq[i][j] == vocs[-1]['I_DAT']:
                     tem += lab[i][j]
-                if seq[i][j] == 10:
+                elif seq[i][j] == vocs[-1]['E_DAT']:
+                    tem += lab[i][j]
+                    choiceData.append(tem)
+                elif seq[i][j] == vocs[-1]['S_DAT']:
                     choiceData.append(lab[i][j])
-            if len(tem) > 0:
-                choiceData.append(tem)
+            # if len(tem) > 0:
+            #     choiceData.append(tem)
     ch = '***'.join(choiceData)
     finalData = '' + ch
     if finalData == '':
@@ -119,6 +136,8 @@ def predict(string):
 resultp, resultt, da = predict('在“区域”中选择广西')
 print(resultp, resultt, da)
 resultp, resultt, da = predict('”任务状态“选择：已下达')
+print(resultp, resultt, da)
+resultp, resultt, da = predict('在“区域”中选择天津-汽车工程院')
 print(resultp, resultt, da)
 
 #
