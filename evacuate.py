@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 
 
-ExcelFile = pd.read_excel('./testResult_v5.xls', header=None, index=None).fillna(0)
+ExcelFile = pd.read_excel('./testResult_v6.xls', header=None, index=None).fillna(0)
 y = np.array(ExcelFile.values)
 row = y.shape[0]
 A_avg_ratio = 0
@@ -49,12 +49,20 @@ print('Action 平均分：'+str(A_avg_ratio/row*3)+'\nTarget 平均分：'+str(T
 # Target 平均分：0.9900911169469266
 # Data 平均分： 0.9533233265730978
 
+# 新测试集
 # result:0.757847533632287
 # Action 平均分：0.9861932938856024
 # Target 平均分：0.9932885528027224
 # Data 平均分： 0.9686766225227765
 
+# 补充测试集
 # result:0.8571428571428571
 # Action 平均分：1.0
 # Target 平均分：0.9938533869906416
 # Data 平均分： 0.9830700798838053
+
+# action 不只取第一个
+# result:0.8851540616246498
+# Action 平均分：0.987869198312237
+# Target 平均分：0.9940479000605581
+# Data 平均分： 0.9836058368495078

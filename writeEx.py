@@ -26,7 +26,7 @@ def compare():
             initData = str(y[i, 3]).replace("，", "").replace('\t', '').strip()
         else:
             initData = str(y[i, 3])
-        resultAction = str(resultAction).split('***')[0]
+        resultAction = str(resultAction).replace('***', '')
         resultTarget = str(resultTarget).replace('***', '').replace("和", "").replace("、", "")
         resultData = "".join(resultData).replace('***', '')
 
@@ -55,9 +55,9 @@ def compare():
             sheet.write(j, 3, str(Dratio))
             j += 1
         else:
-            print("-----------")
+            print(str(y[i, 0])+"-----------")
     release()
-    xls.save('testResult_v5.xls')
+    xls.save('testResult_v6.xls')
     result = num / row
     print('result:' + str(result))
 
