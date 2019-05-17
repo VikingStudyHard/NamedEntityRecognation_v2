@@ -57,7 +57,7 @@ def compare():
         else:
             print(str(y[i, 0])+"-----------")
     release()
-    xls.save('testResult_v6.xls')
+    xls.save('testResult_v7.xls')
     result = num / row
     print('result:' + str(result))
 

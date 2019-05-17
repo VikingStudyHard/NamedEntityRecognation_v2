@@ -141,7 +141,7 @@ if __name__ == "__main__":
         for list in sentence_list:
             if list != '':
                 list = list[3:]  # 去掉每个操作三个序列字符 "1: "
-                tokens = re.split('，', list)
+                tokens = re.split('，|,', list)
                 for token in tokens:
                     if token != '':
                         sht1.write(i, 0, token)  # 行号,列号,值

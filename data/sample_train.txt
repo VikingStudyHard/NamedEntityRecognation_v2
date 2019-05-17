@@ -36239,8 +36239,10 @@ R	ws	SBV	O
 件	n	ATT	O
 创	v	ATT	B_TAR
 建	v	ATT	I_TAR
-时	n	SBV	I_TAR
-间	n	SBV	E_TAR
+时	n	POB	I_TAR
+间	n	POB	E_TAR
+填	v	HED	B_ACT
+写	v	HED	E_ACT
 从	p	ADV	O
 2	nt	POB	B_DAT
 0	nt	POB	I_DAT
@@ -36252,8 +36254,8 @@ R	ws	SBV	O
 -	nt	POB	I_DAT
 0	nt	POB	I_DAT
 8	nt	POB	E_DAT
-开	v	HED	B_TAR
-始	v	HED	E_TAR
+开	v	VOB	B_TAR
+始	v	VOB	E_TAR
 
 到	p	ADV	S_ACT
 2	nt	POB	B_DAT
@@ -36810,8 +36812,10 @@ T	ws	VOB	E_DAT
 件	n	POB	O
 创	v	ATT	B_TAR
 建	v	ATT	I_TAR
-时	n	SBV	I_TAR
-间	n	SBV	E_TAR
+时	n	POB	I_TAR
+间	n	POB	E_TAR
+填	v	HED	B_ACT
+写	v	HED	E_ACT
 从	p	ADV	O
 2	nt	POB	B_DAT
 0	nt	POB	I_DAT
@@ -36823,8 +36827,8 @@ T	ws	VOB	E_DAT
 -	nt	POB	I_DAT
 0	nt	POB	I_DAT
 8	nt	POB	E_DAT
-开	v	HED	B_TAR
-始	v	HED	E_TAR
+开	v	VOB	B_TAR
+始	v	VOB	E_TAR
 
 到	p	ADV	S_ACT
 2	nt	POB	B_DAT
@@ -36854,8 +36858,10 @@ T	ws	VOB	E_DAT
 件	n	POB	O
 创	v	ATT	B_TAR
 建	v	ATT	I_TAR
-时	n	SBV	I_TAR
-间	n	SBV	E_TAR
+时	n	POB	I_TAR
+间	n	POB	E_TAR
+填	v	HED	B_ACT
+写	v	HED	E_ACT
 从	p	ADV	O
 2	nt	POB	B_DAT
 0	nt	POB	I_DAT
@@ -36867,8 +36873,8 @@ T	ws	VOB	E_DAT
 -	nt	POB	I_DAT
 0	nt	POB	I_DAT
 8	nt	POB	E_DAT
-开	v	HED	B_TAR
-始	v	HED	E_TAR
+开	v	VOB	B_TAR
+始	v	VOB	E_TAR
 
 到	p	ADV	S_ACT
 2	nt	POB	B_DAT
@@ -37318,8 +37324,10 @@ T	ws	VOB	E_DAT
 件	n	ATT	O
 创	v	ATT	B_TAR
 建	v	ATT	I_TAR
-时	n	SBV	I_TAR
-间	n	SBV	E_TAR
+时	n	POB	I_TAR
+间	n	POB	E_TAR
+填	v	HED	B_ACT
+写	v	HED	E_ACT
 从	p	ADV	O
 2	nt	POB	B_DAT
 0	nt	POB	I_DAT
@@ -37331,8 +37339,8 @@ T	ws	VOB	E_DAT
 -	nt	POB	I_DAT
 0	nt	POB	I_DAT
 8	nt	POB	E_DAT
-开	v	HED	B_TAR
-始	v	HED	E_TAR
+开	v	VOB	B_TAR
+始	v	VOB	E_TAR
 
 到	p	ADV	S_ACT
 2	nt	POB	B_DAT
@@ -38413,12 +38421,12 @@ D	ws	ATT	O
 面	n	ATT	O
 中	nd	ATT	O
 的	u	RAD	O
-变	v	ATT	B_TAR
-更	v	ATT	I_TAR
-后	nd	ADV	I_TAR
-I	ws	SBV	I_TAR
-D	ws	SBV	I_TAR
-查	v	COO	I_TAR
+变	v	ATT	O
+更	v	ATT	O
+后	nd	ADV	O
+I	ws	SBV	O
+D	ws	SBV	O
+查	v	COO	B_TAR
 找	v	COO	E_TAR
 按	n	VOB	O
 钮	n	VOB	O
