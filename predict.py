@@ -133,6 +133,9 @@ def predict(string):
     return finalAction, finalTarget, finalData
 
 
+resultp, resultt, da = predict('在零部件名称中填写MBRASSY-FRSIDERH')
+print(resultp, resultt, da)
+
 # resultp, resultt, da = predict('在“区域”中选择广西')
 # print(resultp, resultt, da)
 # resultp, resultt, da = predict('”任务状态“选择：已下达')

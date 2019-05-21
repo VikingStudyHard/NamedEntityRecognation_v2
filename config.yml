@@ -13,9 +13,6 @@ data_params:
     f3:
       min_count: 0
       path: ./Res/voc/f3.voc.pkl
-    f4:
-      min_count: 0
-      path: ./Res/voc/f4.voc.pkl
     label:
       min_count: 0
       path: ./Res/voc/label.voc.pkl
